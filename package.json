@@ -45,6 +45,10 @@
     "node": ">= 8.0.0"
   },
   "dependencies": {
+    "cassandra-driver": "^3.5.0",
+    "csv-write-stream": "^2.0.0",
+    "node-config-module": "git+https://github.com/bitmain-israel/node-config-module",
+    "node-schedule": "^1.3.0",
     "winston": "^3.0.0"
   }
 }
