@@ -45,6 +45,9 @@
     "node": ">= 8.0.0"
   },
   "dependencies": {
-    "winston": "^3.0.0"
+    "kafka-node": "^3.0.1",
+    "node-config-module": "git+https://github.com/bitmain-israel/node-config-module.git",
+    "smart-trader-common": "git+https://github.com/bitmain-israel/smart-trader-common.git",
+    "winston": "^3.1.0"
   }
 }

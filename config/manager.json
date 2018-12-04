@@ -1,0 +1,41 @@
+{
+  "kafka":{
+    "topics" :{
+      "dbListener": {
+        "topicWrite": "dbListener",
+        "writeKeys": ["orders"]
+      },
+      "externalRequests": {
+        "topicRead": "sendOrderRequests",
+        "topicWrite": "sendOrderResponses"
+      },
+      "generateAddresses": {
+        "topicWrite": "generateAddressesRequests",
+        "topicRead": "generateAddressesResponses"
+      },
+      "depositsTracker": {
+        "topicWrite": "depositsTrackRequests",
+        "topicRead": "depositsTrackResponses",
+        "readKeys": ["deposit", "depositComplete"]
+      },
+      "tradeManager": {
+        "topicWrite": "tradeRequests",
+        "writeKeys": ["prepareForTrade", "deposit"],
+        "topicRead": "tradeResponses",
+        "readKeys": ["trade", "tradeComplete"]
+      }
+    },
+    "messageType":{
+      "withdrawalStatusReq": "withdrawalStatusReq",
+      "withdrawalStatusRes": "withdrawalStatusRes",
+      "withdrawalReq":"withdrawalReq",
+      "withdrawalDbAdd": "withdrawalsStatusChange",
+      "withdrawalDbUpdate": "withdrawalsStatusChange"
+    },
+    "timeout" : 5000,
+    "oldLimit" : 5000,
+    "periodToCheck" : 1500,
+    "kafkaEndpointPort" : "2181",
+    "kafkaEndpointUrl" : "localhost"
+  }
+}
