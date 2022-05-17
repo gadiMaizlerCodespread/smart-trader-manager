@@ -4,3 +4,4 @@ process.title = ['Smart Trader Manager']; // TO-DO: change to your process real 
 
 import server from 'server';
 server.start();
+console.log('test')
